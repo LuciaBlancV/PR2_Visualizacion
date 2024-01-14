@@ -13,3 +13,10 @@ Un conjunto de datos de canciones de Spotify de distintos géneros y sus caracte
 *Fuente:* Kaggle
 
 *Autor*: Maharshi Pandya
+
+
+
+
+
+Spotify transformó para siempre la forma de escuchar música cuando se lanzó en Suecia en 2008. Descubre, gestiona y comparte más de 70 millones de canciones de forma gratuita, o suscríbete a Spotify Premium para acceder a funciones exclusivas como el modo sin conexión, una calidad de sonido mejorada y una experiencia musical sin anuncios. En la actualidad, Spotify es el servicio de streaming de audio más popular del mundo, con 365 millones de usuarios y 165 millones de suscriptores en 178 mercados. Es el mayor generador de ingresos para el negocio de la música en la actualidad.
+
