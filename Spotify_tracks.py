@@ -32,8 +32,6 @@ pd.set_option('display.max_columns',None)
 # Lee el archivo CSV
 df_spotify = pd.read_csv('/Users/luciablanc/Documents/AAESTUDIOS/UOC_Máster_Data_Science/4t_Semestre/Visualización_datos/PR2/Spotify_tracks.csv')
 
-# Muestra las primeras filas del dataframe resultante
-print(df_spotify.head())
 
 df_spotify.info()
 
@@ -56,13 +54,13 @@ df_spotify.describe()
 
 # Visualizations
 
+imagen_path = "/Users/luciablanc/Downloads/Spotify_logo.png"
+
 # Streamlit App
 st.title("Spotify Data Visualization")
 
-# Sidebar Widgets
-selected_visualization = st.sidebar.selectbox("Select Visualization", ["Correlation Matrix", "Top 30 Popular Singers", "Top 10 Popular Genres",
-                                                                       "Top 25 songs", "Songs with Explicit Content", "Tempo vs. Popularity",
-                                                                 "Energy vs. Danceability", "Correlation Energy vs. Loudness"])
+# Muestra la imagen en Streamlit
+st.image(imagen_path, caption='Spotify Logo', use_column_width=True)
 
 
 
@@ -89,63 +87,68 @@ col2.plotly_chart(fig2)
 
 
 # Second row
-col3, col4 = st.columns(2)
+col3 = st.columns(1)[0]
 
 # 3. Top 5 Popular Genres of Popular Artists
-with col1:
-    fig3 = px.bar(df_spotify.groupby('track_genre', as_index=False).sum().sort_values(by='popularity', ascending=False).head(5),
-              x='track_genre', y='popularity', color_discrete_sequence=['lightblue'],
+fig3 = px.bar(df_spotify.groupby('track_genre', as_index=False).sum().sort_values(by='popularity', ascending=False).head(10),
+              x='track_genre', y='popularity', color_discrete_sequence=['lightgreen'],
               template='plotly_dark', text='popularity', title='Top 10 Popular Genres')
-    fig3.update_layout(
-    title=dict(text='Top 5 Popular Genres of Popular Artists'),
-    xaxis=dict(title='Genres'),
+
+fig3.update_layout(
+    xaxis=dict(title='Track Genre'),
     yaxis=dict(title='Popularity'),
-    height=400,
-    width= 400   
-    )
+)
 
-    col3.plotly_chart(fig3)
+col3.plotly_chart(fig3)
 
 
+# Third row
+col4 = st.columns(1)[0]
 
-# 4. Top 25 songs
-with col2:
-    fig4 = px.line(df_spotify.sort_values(by='popularity', ascending=False).head(10), x='track_name', y='popularity',
+fig4 = px.line(df_spotify.sort_values(by='popularity', ascending=False).head(27), x='track_name', y='popularity',
                hover_data=['artists'], color_discrete_sequence=['green'], markers=True,
-               title='Top 10 songs in Spotify')
-    fig4.update_layout(
-    title=dict(text='Top 10 songs in Spotify'),
+               title='Top 10 songs in Spotify')  
+fig4.update_layout(
+    title=dict(text='Top 10 songs in Spotify'), 
     xaxis=dict(title='Track Name'),
     yaxis=dict(title='Popularity'),
-    height=400,
-    width=550,
-    margin=dict(l=50, r=50, b=50, t=50, pad=4)  # Ajustar el margen derecho
-    )
-    col4.plotly_chart(fig4)
+)
+col4.plotly_chart(fig4)
 
 
 
 
-
-
-# Third Row
+# Fourth Row
 col5, col6, col7 = st.columns(3)
 
-# 6. Tempo vs. Popularity
+# 5. Tempo vs. Popularity
 fig5 = px.scatter(df_spotify, x='tempo', y='popularity', color='tempo',
-                  color_continuous_scale=px.colors.sequential.Plasma, template='plotly_dark',
+                  color_continuous_scale=px.colors.sequential.Greens, template='plotly_dark',
                   title='Tempo Versus Popularity')
+fig5.update_layout(
+    xaxis=dict(title='Tempo'),
+    yaxis=dict(title='Popularity'),
+)
 col5.plotly_chart(fig5)
+
 
 # 6. Energy vs. Danceability
 fig6 = px.scatter(df_spotify, x='energy', y='danceability', color='danceability',
-                  color_continuous_scale=px.colors.sequential.Plotly3, template='plotly_dark',
+                  color_continuous_scale=px.colors.sequential.Greens, template='plotly_dark',
                   title='Energy Versus Danceability')
+fig6.update_layout(
+    xaxis=dict(title='Energy'),
+    yaxis=dict(title='Danceability'),
+)
 col6.plotly_chart(fig6)
 
 
 # 7. Correlation Energy vs. Loudness
 fig7 = px.scatter(df_spotify, x='energy', y='loudness', color_discrete_sequence=['lightgreen'],
                   template='plotly_dark', title='Energy versus Loudness correlation')
+fig7.update_layout(
+    xaxis=dict(title='TEnergy'),
+    yaxis=dict(title='Loudness'),
+)
 col7.plotly_chart(fig7)
 
