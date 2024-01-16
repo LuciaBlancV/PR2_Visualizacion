@@ -52,6 +52,6 @@ pip install pandas numpy matplotlib plotly seaborn streamlit
 Una vez se hayan instalado las dependencias, para poder ver la visualización, se debe escribir el siguiente código en el terminal: 
 
 ```bash
-streamlit run nombre_del_script.py
+streamlit run Spotify_tracks.py
 ```
 
