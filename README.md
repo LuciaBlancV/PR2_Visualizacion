@@ -20,19 +20,19 @@ Un conjunto de datos de canciones de Spotify de distintos géneros y sus caracte
 
 ### Visualizaciones
 
-*Matriz de Correlación:* Muestra las correlaciones entre columnas numéricas en el conjunto de datos.
+*1. Matriz de Correlación:* Muestra las correlaciones entre columnas numéricas en el conjunto de datos.
 
-*Top 20 Artistas Populares:* Gráfico de barras que muestra los 20 artistas más populares según la popularidad de las pistas.
+*2. Top 20 Artistas Populares:* Gráfico de barras que muestra los 20 artistas más populares según la popularidad de las pistas.
 
-*Top 10 Géneros Populares:* Gráfico de barras que ilustra los 10 géneros más populares según la popularidad de las pistas.
+*3. Top 10 Géneros Populares:* Gráfico de barras que ilustra los 10 géneros más populares según la popularidad de las pistas.
 
-*Top 10 Canciones en Spotify:* Gráfico de líneas que presenta la popularidad de las 10 canciones principales en Spotify.
+*4. Top 10 Canciones en Spotify:* Gráfico de líneas que presenta la popularidad de las 10 canciones principales en Spotify.
 
-*Tempo vs. Popularidad:* Gráfico de dispersión que muestra la relación entre el tempo y la popularidad de las pistas.
+*5. Tempo vs. Popularidad:* Gráfico de dispersión que muestra la relación entre el tempo y la popularidad de las pistas.
 
-*Energía vs. Bailabilidad:* Gráfico de dispersión que ilustra la relación entre la energía y la bailabilidad de las pistas.
+*6. Energía vs. Bailabilidad:* Gráfico de dispersión que ilustra la relación entre la energía y la bailabilidad de las pistas.
 
-*Correlación Energía vs. Volumen:* Gráfico de dispersión que muestra la correlación entre la energía y el volumen.
+*7. Correlación Energía vs. Volumen:* Gráfico de dispersión que muestra la correlación entre la energía y el volumen.
 
 
 
