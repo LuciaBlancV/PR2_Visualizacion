@@ -4,7 +4,8 @@
 ## Máster Ciencia de Datos (UOC)
 ## Lucia Blanc Velázquez
 
-En este repositorio se encuentran las visualizaciones creadas de la práctica de la asignatura de Visualización de Datos del Máster de Ciencia de Datos de la UOC.
+Este script en Python proporciona una visualización integral de los datos de canciones de Spotify utilizando diversas bibliotecas como Plotly, Seaborn y Streamlit. El script lee un archivo CSV que contiene información sobre las pistas de Spotify y genera visualizaciones perspicaces para explorar tendencias y patrones dentro del conjunto de datos.
+
 
 
 ### Dataset: Spotify Tracks
@@ -20,3 +21,10 @@ Un conjunto de datos de canciones de Spotify de distintos géneros y sus caracte
 
 Spotify transformó para siempre la forma de escuchar música cuando se lanzó en Suecia en 2008. Descubre, gestiona y comparte más de 70 millones de canciones de forma gratuita, o suscríbete a Spotify Premium para acceder a funciones exclusivas como el modo sin conexión, una calidad de sonido mejorada y una experiencia musical sin anuncios. En la actualidad, Spotify es el servicio de streaming de audio más popular del mundo, con 365 millones de usuarios y 165 millones de suscriptores en 178 mercados. Es el mayor generador de ingresos para el negocio de la música en la actualidad.
 
+
+
+### Requisitos
+Se deben tener instaladas las siguientes bibliotecas de Python, las cuales se pueden instalar utilizando el siguiente comando:
+
+```bash
+pip install pandas numpy matplotlib plotly seaborn streamlit
