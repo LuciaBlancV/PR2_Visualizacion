@@ -47,12 +47,12 @@ Se pueden instalar utilizando el siguiente comando:
 
 ```bash
 pip install pandas numpy matplotlib plotly seaborn streamlit
-
+```
 
 ## Streamlit App
 Una vez se hayan instalado las dependencias, para poder ver la visualización, se debe escribir el siguiente código en el terminal: 
 
 ```bash
 streamlit run nombre_del_script.py
-
+```
 
