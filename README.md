@@ -42,12 +42,17 @@ Se deben tener instaladas las siguientes bibliotecas de Python:
 
 Dependencias:
 
-*pandas
-*numpy
-*matplotlib
-*plotly
-*seaborn
-*streamlit
+*pandas*
+
+*numpy*
+
+*matplotlib*
+
+*plotly*
+
+*seaborn*
+
+*streamlit*
 
 
 Se pueden instalar utilizando el siguiente comando:
