@@ -60,7 +60,7 @@ imagen_path = "/Users/luciablanc/Downloads/Spotify_logo.png"
 st.title("Spotify Data Visualization")
 
 # Muestra la imagen en Streamlit
-st.image(imagen_path, caption='Spotify Logo', use_column_width=True)
+st.image(imagen_path,  use_column_width=True)
 
 
 
