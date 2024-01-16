@@ -40,20 +40,7 @@ Un conjunto de datos de canciones de Spotify de distintos géneros y sus caracte
 ### Requisitos y Dependencias
 Se deben tener instaladas las siguientes bibliotecas de Python:
 
-Dependencias:
-
-*pandas*
-
-*numpy*
-
-*matplotlib*
-
-*plotly*
-
-*seaborn*
-
-*streamlit*
-
+Dependencias: *pandas*, *numpy*, *matplotlib*, *plotly*, *seaborn*, *streamlit*
 
 Se pueden instalar utilizando el siguiente comando:
 
